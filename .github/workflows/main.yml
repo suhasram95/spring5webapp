@@ -43,6 +43,7 @@ jobs:
           mvn clean test
           cd target/surefire-reports
           ls -al
+          TXT_FILE=(ls | grep *.txt)
 
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots install
