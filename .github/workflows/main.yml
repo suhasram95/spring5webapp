@@ -47,6 +47,7 @@ jobs:
           ls -al 
           JAR=$(ls | awk -F"-" '{print $1}')
           mv *.jar $JAR.jar
+          ls -al
       
       - uses: actions/upload-artifact@v2
         with:
