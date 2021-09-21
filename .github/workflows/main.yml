@@ -45,6 +45,8 @@ jobs:
           cp target/*.jar staging 
           cd staging
           ls -al 
+          JAR=$(ls | awk -F"-" '{print $1}')
+          mv *.jar $JAR.jar
       
       - uses: actions/upload-artifact@v2
         with:
