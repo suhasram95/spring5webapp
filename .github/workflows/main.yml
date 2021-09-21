@@ -41,7 +41,7 @@ jobs:
       - name: Unit test
         run: |
           mvn clean test
-          cd target
+          cd target/surefire-reports
           ls -al
 
       - name: Build with Maven
