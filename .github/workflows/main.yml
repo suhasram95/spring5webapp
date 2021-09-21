@@ -38,7 +38,13 @@ jobs:
           cache: maven
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify
-      - run: mkdir staging && cp target/*.jar staging && cd staging && ls -al
+      
+      - name: Debug jar artifact
+        run: |
+          mkdir staging 
+          cp target/*.jar staging 
+          cd staging
+          ls -al 
       
       - uses: actions/upload-artifact@v2
         with:
