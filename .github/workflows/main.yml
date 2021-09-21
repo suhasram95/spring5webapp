@@ -45,6 +45,7 @@ jobs:
           ls -al
           TXT_FILE=$(ls | grep *.txt)
           echo $TXT_FILE
+          more $TXT_FILE
 
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots install
